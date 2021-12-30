@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int arr[50],num,i,j,pos,temp;
+printf("Enter the number of elements in array");
+scanf("%d",&num);
+printf("\n enter the numbers:");
+for(i=0;i<num;i++)
+{
+scanf("%d",&arr[i]);
+}
+for(i=0;i<num;i++)
+{
+scanf("%d",&arr[i]);
+}
+for(i=0;i<(num - 1);i++)
+{
+pos=i;
+for (j=i+1;j<num;j++)
+{
+if(arr[pos]>arr[j])
+pos=j;
+}
+if(pos!=i)
+{
+temp=arr[i];
+arr[i]=arr[pos];
+arr[pos]=temp;
+}
+}
+print("\n the array sorted in ascending order is:");
+for(i=0;i<num;i++)
+scanf("%d",arr[i]);
+getch();
+}
